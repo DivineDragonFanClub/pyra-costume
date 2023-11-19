@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: fe
+  m_EditorClassIdentifier: 
+  m_GroupName: fe
+  m_Data:
+    m_SerializedData: []
+  m_GUID: cb2d985db0fff4d3f94d869fabe33d62
+  m_SerializeEntries:
+  - m_GUID: e6e9a19c3678ded42a3bc431ebef7dbd
+    m_Address: Shaders/Utils/FallbackError.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ef5514adb4c2c48f199098d50f48c7ff
+    m_Address: CustomRP/Shaders/Chara/CharaStandard.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0e2850975bebd4edead28315b9285ab2
+    m_Address: CustomRP/Shaders/Common/Shadow.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: de8bf3cb2cc944e619e36389510e68af
+    m_Address: Unit/Model/uBody/Pyr0AF/c000/Prefabs/uBody_Pyr0AF_c000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 03a575ebfb0864bdaadfc3ce79f4a4f9, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 957bb14b650d24315be4ff95d9aa61ff, type: 2}
+    - {fileID: 11400000, guid: ffbf1da1068ae41da8e5593dcef5f301, type: 2}
