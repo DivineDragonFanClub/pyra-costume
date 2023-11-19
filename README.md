@@ -4,5 +4,7 @@ Looking for the mod to install? Check [here](https://gamebanana.com/mods/479907)
 
 ### How to use
 
-Open the PyraUnity folder as a Unity project.
+This was created following the guides available on the [Cobalt wiki](https://github.com/Raytwo/Cobalt/wiki/Setting-up-your-Unity-project)
+
+Open the `PyraUnity` folder as a Unity project.
 
