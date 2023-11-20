@@ -8,3 +8,8 @@ This was created following the guides available on the [Cobalt wiki](https://git
 
 Open the `PyraUnity` folder as a Unity project.
 
+### Notes on the .blend file
+When exporting it as an FBX for Unity usage, choose scale 0.01.
+
+### Notes on Resources folder
+This contains a body model for targeting costume sizing.
