@@ -50,20 +50,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 242812424305576076}
-  stiffnessForce: 300
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097874425358}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -5
-    max: 0
+    min: -20
+    max: 20
   zAngleLimits:
     active: 1
-    min: 0
-    max: 8
+    min: -20
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -649,20 +649,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 8196184097449973205}
-  stiffnessForce: 800
-  dragForce: 1
+  stiffnessForce: 500
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097876462732}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -4
-    max: 4
+    min: -15
+    max: 15
   zAngleLimits:
     active: 1
-    min: 0
-    max: 10
+    min: -15
+    max: 15
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -749,20 +749,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 8833743981681235680}
-  stiffnessForce: 100
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098010201762}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -10
-    max: 10
+    min: -24
+    max: 20
   zAngleLimits:
     active: 1
-    min: -1
-    max: 2
+    min: -24
+    max: 24
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -969,20 +969,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 2943038690214746202}
-  stiffnessForce: 300
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097608589726}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: 0
-    max: 5
+    min: -20
+    max: 20
   zAngleLimits:
     active: 1
-    min: 0
-    max: 8
+    min: -20
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -1131,20 +1131,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 346209995426720167}
-  stiffnessForce: 1000
-  dragForce: 1
+  stiffnessForce: 500
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097304922532}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -2.5
-    max: 2.5
+    min: 0
+    max: 0
   zAngleLimits:
     active: 1
     min: 0
-    max: 15
+    max: 0
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -1291,20 +1291,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 3849142124688821728}
-  stiffnessForce: 300
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097916677143}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -5
-    max: 0
+    min: -21
+    max: 20
   zAngleLimits:
     active: 1
-    min: 0
-    max: 4
+    min: -21
+    max: 21
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -1422,20 +1422,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 2659224779150569405}
-  stiffnessForce: 10
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098168549547}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -10
-    max: 10
+    min: -25
+    max: 20
   zAngleLimits:
     active: 1
-    min: -1
-    max: 2
+    min: -25
+    max: 25
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -1530,22 +1530,22 @@ MonoBehaviour:
   - {fileID: 5916363653819202806}
   jobColliders: []
   jobProperties:
-  - stiffnessForce: 1000
-    dragForce: 1
+  - stiffnessForce: 500
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -2.5
-      max: 2.5
+      min: 0
+      max: 0
     zAngleLimits:
       active: 1
       min: 0
-      max: 15
+      max: 0
     radius: 0.05
     springLength: 0.09876359
     boneAxis:
@@ -1585,22 +1585,22 @@ MonoBehaviour:
         y: 0
         z: 0
         w: 1
-  - stiffnessForce: 800
-    dragForce: 1
+  - stiffnessForce: 500
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -4
-      max: 4
+      min: -15
+      max: 15
     zAngleLimits:
       active: 1
-      min: 0
-      max: 10
+      min: -15
+      max: 15
     radius: 0.05
     springLength: 0.1215488
     boneAxis:
@@ -1640,22 +1640,22 @@ MonoBehaviour:
         y: 0.0048748543
         z: -0.033572424
         w: 1
-  - stiffnessForce: 600
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: 0
-      max: 5
+      min: -20
+      max: 20
     zAngleLimits:
       active: 1
-      min: 0
-      max: 10
+      min: -20
+      max: 20
     radius: 0.05
     springLength: 0.12843776
     boneAxis:
@@ -1695,22 +1695,22 @@ MonoBehaviour:
         y: -0.0017177538
         z: -0.03722719
         w: 1
-  - stiffnessForce: 300
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: 0
-      max: 5
+      min: -20
+      max: 20
     zAngleLimits:
       active: 1
-      min: 0
-      max: 8
+      min: -20
+      max: 20
     radius: 0.05
     springLength: 0.1222973
     boneAxis:
@@ -1750,22 +1750,22 @@ MonoBehaviour:
         y: 0.0018220238
         z: -0.057251543
         w: 1
-  - stiffnessForce: 300
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: 0
-      max: 5
+      min: -20
+      max: 20
     zAngleLimits:
       active: 1
-      min: 0
-      max: 4
+      min: -20
+      max: 20
     radius: 0.05
     springLength: 0.12229687
     boneAxis:
@@ -1805,22 +1805,22 @@ MonoBehaviour:
         y: 0.000000019825242
         z: -0.0422206
         w: 1
-  - stiffnessForce: 300
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: 0
-      max: 5
+      min: -21
+      max: 20
     zAngleLimits:
       active: 1
-      min: 0
-      max: 4
+      min: -21
+      max: 20
     radius: 0.05
     springLength: 0.12229712
     boneAxis:
@@ -1860,22 +1860,22 @@ MonoBehaviour:
         y: 0.000000094410254
         z: -0.04222071
         w: 1
-  - stiffnessForce: 300
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: 0
-      max: 8
+      min: -22
+      max: 20
     zAngleLimits:
       active: 1
-      min: -1
-      max: 4
+      min: -22
+      max: 20
     radius: 0.05
     springLength: 0.122296914
     boneAxis:
@@ -1915,22 +1915,22 @@ MonoBehaviour:
         y: 0.00000014853697
         z: -0.041019432
         w: 1
-  - stiffnessForce: 200
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: 0
-      max: 8
+      min: -23
+      max: 20
     zAngleLimits:
       active: 1
-      min: -1
-      max: 2
+      min: -23
+      max: 20
     radius: 0.05
     springLength: 0.1222971
     boneAxis:
@@ -1970,22 +1970,22 @@ MonoBehaviour:
         y: -0.00000015540623
         z: -0.039266057
         w: 1
-  - stiffnessForce: 100
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -10
-      max: 10
+      min: -24
+      max: 20
     zAngleLimits:
       active: 1
-      min: -1
-      max: 2
+      min: -24
+      max: 20
     radius: 0.05
     springLength: 0.1222969
     boneAxis:
@@ -2025,22 +2025,22 @@ MonoBehaviour:
         y: -0.000000056875198
         z: -0.035218474
         w: 1
-  - stiffnessForce: 10
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -10
-      max: 10
+      min: -25
+      max: 20
     zAngleLimits:
       active: 1
-      min: -1
-      max: 2
+      min: -25
+      max: 20
     radius: 0.05
     springLength: 0.122297294
     boneAxis:
@@ -2080,22 +2080,22 @@ MonoBehaviour:
         y: -0.00000019989874
         z: -0.031890124
         w: 1
-  - stiffnessForce: 1
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -10
-      max: 10
+      min: 0
+      max: 0
     zAngleLimits:
       active: 1
-      min: -1
-      max: 2
+      min: 0
+      max: 0
     radius: 0.05
     springLength: 0.1222969
     boneAxis:
@@ -2459,20 +2459,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 6606636353575156649}
-  stiffnessForce: 200
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097344425882}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: 0
-    max: 8
+    min: -23
+    max: 20
   zAngleLimits:
     active: 1
-    min: -1
-    max: 2
+    min: -23
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -2714,20 +2714,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 4060461716266942544}
-  stiffnessForce: 600
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098750415326}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -5
-    max: 0
+    min: -20
+    max: 20
   zAngleLimits:
     active: 1
-    min: 0
-    max: 10
+    min: -20
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -2936,20 +2936,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 269963746905619364}
-  stiffnessForce: 10
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098689580636}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -10
-    max: 10
+    min: -25
+    max: 20
   zAngleLimits:
     active: 1
-    min: -1
-    max: 2
+    min: -25
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -3005,20 +3005,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 1161542483138462768}
-  stiffnessForce: 300
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098943930787}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: 0
-    max: 5
+    min: -21
+    max: 20
   zAngleLimits:
     active: 1
-    min: 0
-    max: 4
+    min: -21
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -3387,20 +3387,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 8075268814680818863}
-  stiffnessForce: 300
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790099022809545}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: 0
-    max: 8
+    min: -22
+    max: 20
   zAngleLimits:
     active: 1
-    min: -1
-    max: 4
+    min: -22
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -3518,20 +3518,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 1962368584928054694}
-  stiffnessForce: 300
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097455851993}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: 0
-    max: 5
+    min: -20
+    max: 20
   zAngleLimits:
     active: 1
-    min: 0
-    max: 4
+    min: -20
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -3626,22 +3626,22 @@ MonoBehaviour:
   - {fileID: 5718722533609440265}
   jobColliders: []
   jobProperties:
-  - stiffnessForce: 1000
-    dragForce: 1
+  - stiffnessForce: 500
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -2.5
-      max: 2.5
+      min: 0
+      max: 0
     zAngleLimits:
       active: 1
       min: 0
-      max: 15
+      max: 0
     radius: 0.05
     springLength: 0.098743156
     boneAxis:
@@ -3681,22 +3681,22 @@ MonoBehaviour:
         y: 0
         z: 0
         w: 1
-  - stiffnessForce: 800
-    dragForce: 1
+  - stiffnessForce: 500
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -4
-      max: 4
+      min: -15
+      max: 15
     zAngleLimits:
       active: 1
-      min: 0
-      max: 10
+      min: -15
+      max: 15
     radius: 0.05
     springLength: 0.121702895
     boneAxis:
@@ -3736,22 +3736,22 @@ MonoBehaviour:
         y: 0.0046975026
         z: 0.03398994
         w: 1
-  - stiffnessForce: 600
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -5
-      max: 0
+      min: -20
+      max: 20
     zAngleLimits:
       active: 1
-      min: 0
-      max: 10
+      min: -20
+      max: 20
     radius: 0.05
     springLength: 0.1281873
     boneAxis:
@@ -3791,22 +3791,22 @@ MonoBehaviour:
         y: -0.0017647761
         z: 0.038257785
         w: 1
-  - stiffnessForce: 300
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -5
-      max: 0
+      min: -20
+      max: 20
     zAngleLimits:
       active: 1
-      min: 0
-      max: 8
+      min: -20
+      max: 20
     radius: 0.05
     springLength: 0.122297086
     boneAxis:
@@ -3846,22 +3846,22 @@ MonoBehaviour:
         y: 0.0032645452
         z: 0.057243012
         w: 1
-  - stiffnessForce: 300
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -5
-      max: 0
+      min: -20
+      max: 20
     zAngleLimits:
       active: 1
-      min: 0
-      max: 4
+      min: -20
+      max: 20
     radius: 0.05
     springLength: 0.12229719
     boneAxis:
@@ -3901,22 +3901,22 @@ MonoBehaviour:
         y: 0.0016547373
         z: 0.043126594
         w: 1
-  - stiffnessForce: 300
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -5
-      max: 0
+      min: -21
+      max: 20
     zAngleLimits:
       active: 1
-      min: 0
-      max: 4
+      min: -21
+      max: 21
     radius: 0.05
     springLength: 0.12229679
     boneAxis:
@@ -3956,22 +3956,22 @@ MonoBehaviour:
         y: 0.0016548892
         z: 0.04312647
         w: 1
-  - stiffnessForce: 300
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -8
-      max: 0
+      min: -22
+      max: 20
     zAngleLimits:
       active: 1
-      min: -1
-      max: 4
+      min: -22
+      max: 22
     radius: 0.05
     springLength: 0.122297145
     boneAxis:
@@ -4011,22 +4011,22 @@ MonoBehaviour:
         y: 0.0007977637
         z: 0.041728623
         w: 1
-  - stiffnessForce: 200
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -8
-      max: 0
+      min: -23
+      max: 20
     zAngleLimits:
       active: 1
-      min: -1
-      max: 2
+      min: -23
+      max: 23
     radius: 0.05
     springLength: 0.1222971
     boneAxis:
@@ -4066,22 +4066,22 @@ MonoBehaviour:
         y: -0.00032088885
         z: 0.03970208
         w: 1
-  - stiffnessForce: 100
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -10
-      max: 10
+      min: -24
+      max: 20
     zAngleLimits:
       active: 1
-      min: -1
-      max: 2
+      min: -24
+      max: 24
     radius: 0.05
     springLength: 0.12229716
     boneAxis:
@@ -4121,22 +4121,22 @@ MonoBehaviour:
         y: -0.002442182
         z: 0.035087105
         w: 1
-  - stiffnessForce: 10
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -10
-      max: 10
+      min: -25
+      max: 20
     zAngleLimits:
       active: 1
-      min: -1
-      max: 2
+      min: -25
+      max: 25
     radius: 0.05
     springLength: 0.12229688
     boneAxis:
@@ -4176,22 +4176,22 @@ MonoBehaviour:
         y: -0.0038118844
         z: 0.03135614
         w: 1
-  - stiffnessForce: 1
-    dragForce: 1
+  - stiffnessForce: 400
+    dragForce: 0.4
     springForce:
       x: 0
       y: -0.0001
       z: 0
     windInfluence: 1
-    angularStiffness: 1
+    angularStiffness: 100
     yAngleLimits:
       active: 1
-      min: -10
-      max: 10
+      min: 0
+      max: 0
     zAngleLimits:
       active: 1
-      min: -1
-      max: 2
+      min: 0
+      max: 0
     radius: 0.05
     springLength: 0.122297
     boneAxis:
@@ -4492,20 +4492,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 5629376722289354527}
-  stiffnessForce: 100
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097818420161}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -10
-    max: 10
+    min: -24
+    max: 20
   zAngleLimits:
     active: 1
-    min: -1
-    max: 2
+    min: -24
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -4684,20 +4684,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 8671513232622351767}
-  stiffnessForce: 1000
-  dragForce: 1
+  stiffnessForce: 500
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097177733131}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -2.5
-    max: 2.5
+    min: 0
+    max: 0
   zAngleLimits:
     active: 1
     min: 0
-    max: 15
+    max: 0
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -4784,20 +4784,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 8910315294078177838}
-  stiffnessForce: 300
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098642418990}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -8
-    max: 0
+    min: -22
+    max: 20
   zAngleLimits:
     active: 1
-    min: -1
-    max: 4
+    min: -22
+    max: 22
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -5106,20 +5106,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 4337518650716734786}
-  stiffnessForce: 300
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098675234807}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -5
-    max: 0
+    min: -20
+    max: 20
   zAngleLimits:
     active: 1
-    min: 0
-    max: 4
+    min: -20
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -5205,20 +5205,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 7256215185056838553}
-  stiffnessForce: 1
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098615616672}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -10
-    max: 10
+    min: 0
+    max: 0
   zAngleLimits:
     active: 1
-    min: -1
-    max: 2
+    min: 0
+    max: 0
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -5364,20 +5364,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 1484305717141621985}
-  stiffnessForce: 1
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790097605063521}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -10
-    max: 10
+    min: 0
+    max: 0
   zAngleLimits:
     active: 1
-    min: -1
-    max: 2
+    min: 0
+    max: 0
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -7463,20 +7463,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 2538300937981956823}
-  stiffnessForce: 200
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098854596264}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -8
-    max: 0
+    min: -23
+    max: 20
   zAngleLimits:
     active: 1
-    min: -1
-    max: 2
+    min: -23
+    max: 23
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -8350,20 +8350,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 5271966866680096537}
-  stiffnessForce: 600
-  dragForce: 1
+  stiffnessForce: 400
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098148958000}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: 0
-    max: 5
+    min: -20
+    max: 20
   zAngleLimits:
     active: 1
-    min: 0
-    max: 10
+    min: -20
+    max: 20
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
@@ -8481,20 +8481,20 @@ MonoBehaviour:
   jobColliders: []
   validChildren:
   - {fileID: 7438741042249889296}
-  stiffnessForce: 800
-  dragForce: 1
+  stiffnessForce: 500
+  dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
   windInfluence: 1
   pivotNode: {fileID: 6851790098178320457}
-  angularStiffness: 1
+  angularStiffness: 100
   yAngleLimits:
     active: 1
-    min: -4
-    max: 4
+    min: -15
+    max: 15
   zAngleLimits:
     active: 1
-    min: 0
-    max: 10
+    min: -15
+    max: 15
   lengthLimitTargets: []
   radius: 0.05
   sphereColliders: []
