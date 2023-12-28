@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UTJ.Jobs;
 
 namespace UTJ.Support
 {
@@ -16,6 +17,8 @@ namespace UTJ.Support
 
             public bool ExportSpringBones { get; set; }
             public bool ExportCollision { get; set; }
+            
+            public bool ExportManager { get; set; }
         }
 
         public static string BuildDynamicsSetupString(GameObject rootObject, ExportSettings exportSettings = null)
@@ -42,6 +45,45 @@ namespace UTJ.Support
                 builder.Append(SpringColliderSerialization.BuildCollisionSetupString(rootObject));
             }
 
+            if (exportSettings.ExportManager)
+            {
+                
+            }
+
+            return builder.ToString();
+        }
+        
+        
+
+        private static string SerializeSpringBoneManager(GameObject managerRoot)
+        {
+            var builder = new System.Text.StringBuilder();
+            var springBones = managerRoot.GetComponentsInChildren<SpringJobManager>(true);
+            builder.Append("[Manager]");
+            builder.Append("");
+            string[] springBoneHeaderRow = {
+                "// manager",
+                "optimizeTransform",
+                "isPaused",
+                "simulationFrameRate",
+                "dynamicRatio",
+                "gravity x",
+                "gravity y",
+                "gravity z",
+                "bounce",
+                "friction",
+                "time",
+                "enableAngleLimits",
+                "enableCollision",
+                "enableLengthLimits",
+                "collideWithGround",
+                "groundHeight",
+                "windDisabled",
+                "windInfluence",
+                "windPower x",
+                "windPower y",
+                "windPower z",
+            };
             return builder.ToString();
         }
 
