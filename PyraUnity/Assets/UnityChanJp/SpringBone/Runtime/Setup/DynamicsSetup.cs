@@ -328,8 +328,6 @@ namespace UTJ.Support
                 var myList = new List<SpringManagerImporting.SpringManagerSerializer>();
                 DynamicsSetup.ParseMessage myError = null;
                 springManagerSerializer = DynamicsSetup.SerializeObjectFromStrings<SpringManagerImporting.SpringManagerSerializer>(rawManagerRecords[1].Items, null, ref myError);
-                
-                Debug.Log("whatever");
             }
 
             var dynamicsSetup = new DynamicsSetup
