@@ -45,9 +45,45 @@ namespace UTJ.Support
                 builder.Append(SpringColliderSerialization.BuildCollisionSetupString(rootObject));
             }
 
-            if (exportSettings.ExportManager)
+            if (true)
             {
-                
+                var csvBuilder = new CSVBuilder();
+                csvBuilder.AppendLine("[SpringJobManager]");
+
+                string[] springJobManagerHeaderRow = {
+                    "isPaused",
+                    "simulationFrameRate",
+                    "dynamicRatio",
+                    "gravity x",
+                    "gravity y",
+                    "gravity z",
+                    "bounce",
+                    "friction",
+                    "enableAngleLimits",
+                    "enableCollision",
+                    "enableLengthLimits",
+                    "collideWithGround",
+                    "groundHeight",
+                    "windDisabled",
+                    "windInfluence",
+                    "windPower x",
+                    "windPower y",
+                    "windPower z",
+                    "windDir x",
+                    "windDir y",
+                    "windDir z",
+                    "distanceRate x",
+                    "distanceRate y",
+                    "distanceRate z",
+                    "automaticReset",
+                    "resetDistance",
+                    "resetAngle",
+                };
+
+                csvBuilder.AppendLine(springJobManagerHeaderRow);
+                var springJobManager = rootObject.GetComponent<SpringJobManager>();
+                csvBuilder.Append(SpringManagerImporting.ManagerToSerializer(springJobManager));
+                builder.Append(csvBuilder);
             }
 
             return builder.ToString();
@@ -55,37 +91,7 @@ namespace UTJ.Support
         
         
 
-        private static string SerializeSpringBoneManager(GameObject managerRoot)
-        {
-            var builder = new System.Text.StringBuilder();
-            var springBones = managerRoot.GetComponentsInChildren<SpringJobManager>(true);
-            builder.Append("[Manager]");
-            builder.Append("");
-            string[] springBoneHeaderRow = {
-                "// manager",
-                "optimizeTransform",
-                "isPaused",
-                "simulationFrameRate",
-                "dynamicRatio",
-                "gravity x",
-                "gravity y",
-                "gravity z",
-                "bounce",
-                "friction",
-                "time",
-                "enableAngleLimits",
-                "enableCollision",
-                "enableLengthLimits",
-                "collideWithGround",
-                "groundHeight",
-                "windDisabled",
-                "windInfluence",
-                "windPower x",
-                "windPower y",
-                "windPower z",
-            };
-            return builder.ToString();
-        }
+      
 
         // private
 

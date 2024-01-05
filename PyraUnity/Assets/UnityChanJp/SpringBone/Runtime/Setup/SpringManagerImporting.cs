@@ -21,10 +21,10 @@ namespace UTJ.Support
             public float groundHeight;
             public bool windDisabled;
             public float windInfluence;
-            public float3 distanceRate;
-            public bool automaticReset;
             public float3 windPower;
             public float3 windDir;
+            public float3 distanceRate;
+            public bool automaticReset;
             public float resetDistance;
             public float resetAngle;
         }
@@ -55,6 +55,4 @@ namespace UTJ.Support
             };
         }
     }
-    
-
 }

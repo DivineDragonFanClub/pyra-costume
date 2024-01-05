@@ -88,7 +88,7 @@ namespace UTJ.Support
                 };
             }
 
-            public void BuildObjects(GameObject springBoneRoot, GameObject colliderRoot, IEnumerable<string> requiredBones)
+            public void BuildObjects(GameObject springBoneRoot, GameObject colliderRoot, IEnumerable<string> requiredBones, SpringManagerImporting.SpringManagerSerializer springManagerSerializer)
             {
                 var managerProperties = PersistentSpringManagerProperties.Create(
                     springBoneRoot.GetComponentInChildren<SpringManager>());
@@ -115,6 +115,29 @@ namespace UTJ.Support
                 if (managerProperties != null)
                 {
                     managerProperties.ApplyTo(springManager);
+                }
+                if (springManagerSerializer != null)
+                {
+                    // use the new serializer
+                    springManager.isPaused = springManagerSerializer.isPaused;
+                    springManager.simulationFrameRate = springManagerSerializer.simulationFrameRate;
+                    springManager.dynamicRatio = springManagerSerializer.dynamicRatio;
+                    springManager.gravity = springManagerSerializer.gravity;
+                    springManager.bounce = springManagerSerializer.bounce;
+                    springManager.friction = springManagerSerializer.friction;
+                    springManager.enableAngleLimits = springManagerSerializer.enableAngleLimits;
+                    springManager.enableCollision = springManagerSerializer.enableCollision;
+                    springManager.enableLengthLimits = springManagerSerializer.enableLengthLimits;
+                    springManager.collideWithGround = springManagerSerializer.collideWithGround;
+                    springManager.groundHeight = springManagerSerializer.groundHeight;
+                    springManager.windDisabled = springManagerSerializer.windDisabled;
+                    springManager.windInfluence = springManagerSerializer.windInfluence;
+                    springManager.windPower = springManagerSerializer.windPower;
+                    springManager.windDir = springManagerSerializer.windDir;
+                    springManager.distanceRate = springManagerSerializer.distanceRate;
+                    springManager.automaticReset = springManagerSerializer.automaticReset;
+                    springManager.resetDistance = springManagerSerializer.resetDistance;
+                    springManager.resetAngle = springManagerSerializer.resetAngle;
                 }
                 SpringBoneSetupUTJ.FindAndAssignSpringBones(springManager);
             }
@@ -262,7 +285,38 @@ namespace UTJ.Support
         {
             
         }
-
+        
+        public static string SerializeSpringBoneManager(GameObject managerRoot)
+        {
+            var builder = new System.Text.StringBuilder();
+            var springBones = managerRoot.GetComponentsInChildren<SpringJobManager>(true);
+            builder.Append("[Manager]");
+            builder.Append("");
+            string[] springBoneHeaderRow = {
+                "// manager",
+                "optimizeTransform",
+                "isPaused",
+                "simulationFrameRate",
+                "dynamicRatio",
+                "gravity x",
+                "gravity y",
+                "gravity z",
+                "bounce",
+                "friction",
+                "time",
+                "enableAngleLimits",
+                "enableCollision",
+                "enableLengthLimits",
+                "collideWithGround",
+                "groundHeight",
+                "windDisabled",
+                "windInfluence",
+                "windPower x",
+                "windPower y",
+                "windPower z",
+            };
+            return builder.ToString();
+        }
         private class SpringBoneSerializer
         {
             public SpringBoneBaseSerializer baseData;

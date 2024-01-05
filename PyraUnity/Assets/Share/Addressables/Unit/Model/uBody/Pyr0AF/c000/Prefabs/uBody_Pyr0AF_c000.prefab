@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4060461716266942544}
-  - component: {fileID: 104420636856803813}
+  - component: {fileID: 2096230954539628814}
   m_Layer: 0
   m_Name: DJ_mantle_L_03
   m_TagString: Untagged
@@ -33,14 +33,14 @@ Transform:
   m_Father: {fileID: 8196184097449973205}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &104420636856803813
+--- !u!114 &2096230954539628814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104420636856803812}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -48,8 +48,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 242812424305576076}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -608,7 +607,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 346209995426720167}
-  - component: {fileID: 723991549924142369}
+  - component: {fileID: 181593009968882119}
   m_Layer: 0
   m_Name: DJ_mantle_L_01
   m_TagString: Untagged
@@ -632,14 +631,14 @@ Transform:
   m_Father: {fileID: 2330152573617091180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &723991549924142369
+--- !u!114 &181593009968882119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723991549924142368}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -647,8 +646,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 8196184097449973205}
+  validChildren: []
   stiffnessForce: 500
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -708,7 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2538300937981956823}
-  - component: {fileID: 799310904915980944}
+  - component: {fileID: 2491102962162577262}
   m_Layer: 0
   m_Name: DJ_mantle_L_08
   m_TagString: Untagged
@@ -732,14 +730,14 @@ Transform:
   m_Father: {fileID: 8910315294078177838}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &799310904915980944
+--- !u!114 &2491102962162577262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799310904915980943}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -747,8 +745,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 8833743981681235680}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -1090,7 +1087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2330152573617091180}
-  - component: {fileID: 1339249639748897301}
+  - component: {fileID: 1677022413198537871}
   m_Layer: 0
   m_Name: DJ_mantle_L_00
   m_TagString: Untagged
@@ -1114,14 +1111,14 @@ Transform:
   m_Father: {fileID: 4070461308348073556}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1339249639748897301
+--- !u!114 &1677022413198537871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339249639748897300}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -1129,8 +1126,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 346209995426720167}
+  validChildren: []
   stiffnessForce: 500
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -1250,7 +1246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4337518650716734786}
-  - component: {fileID: 1491807376844488757}
+  - component: {fileID: 6204962785381219395}
   m_Layer: 0
   m_Name: DJ_mantle_L_05
   m_TagString: Untagged
@@ -1274,14 +1270,14 @@ Transform:
   m_Father: {fileID: 242812424305576076}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1491807376844488757
+--- !u!114 &6204962785381219395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491807376844488756}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -1289,8 +1285,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 3849142124688821728}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -1381,7 +1376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8833743981681235680}
-  - component: {fileID: 1768303194769268187}
+  - component: {fileID: 7531881338293714908}
   m_Layer: 0
   m_Name: DJ_mantle_L_09
   m_TagString: Untagged
@@ -1405,14 +1400,14 @@ Transform:
   m_Father: {fileID: 2538300937981956823}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1768303194769268187
+--- !u!114 &7531881338293714908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768303194769268186}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -1420,8 +1415,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 2659224779150569405}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -2673,7 +2667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8196184097449973205}
-  - component: {fileID: 2230688954374477294}
+  - component: {fileID: 6685942908037029884}
   m_Layer: 0
   m_Name: DJ_mantle_L_02
   m_TagString: Untagged
@@ -2697,14 +2691,14 @@ Transform:
   m_Father: {fileID: 346209995426720167}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2230688954374477294
+--- !u!114 &6685942908037029884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2230688954374477293}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -2712,8 +2706,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 4060461716266942544}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -3546,7 +3539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4070461308348073556}
-  - component: {fileID: 3570418483556013577}
+  - component: {fileID: 8300794872464606306}
   m_Layer: 0
   m_Name: mantle_l_manager
   m_TagString: Untagged
@@ -3570,7 +3563,7 @@ Transform:
   m_Father: {fileID: 5372354064641651238}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3570418483556013577
+--- !u!114 &8300794872464606306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3613,681 +3606,21 @@ MonoBehaviour:
   resetDistance: 1
   resetAngle: 60
   SortedBones:
-  - {fileID: 1339249639748897301}
-  - {fileID: 723991549924142369}
-  - {fileID: 2230688954374477294}
-  - {fileID: 104420636856803813}
-  - {fileID: 5154028996620396516}
-  - {fileID: 1491807376844488757}
-  - {fileID: 4553721951104959215}
-  - {fileID: 6911815231156349032}
-  - {fileID: 799310904915980944}
-  - {fileID: 1768303194769268187}
-  - {fileID: 5718722533609440265}
+  - {fileID: 1677022413198537871}
+  - {fileID: 181593009968882119}
+  - {fileID: 6685942908037029884}
+  - {fileID: 2096230954539628814}
+  - {fileID: 8156612893137949904}
+  - {fileID: 6204962785381219395}
+  - {fileID: 5375079859582811760}
+  - {fileID: 5820273884019389053}
+  - {fileID: 2491102962162577262}
+  - {fileID: 7531881338293714908}
+  - {fileID: 6351671959891909451}
   jobColliders: []
-  jobProperties:
-  - stiffnessForce: 500
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: 0
-      max: 0
-    zAngleLimits:
-      active: 1
-      min: 0
-      max: 0
-    radius: 0.05
-    springLength: 0.098743156
-    boneAxis:
-      x: -0.93768096
-      y: 0.04757284
-      z: 0.34422556
-    localPosition:
-      x: 0.039353237
-      y: -0.055731896
-      z: 0.012135583
-    initialLocalRotation:
-      value:
-        x: 0.080959335
-        y: 0.05583836
-        z: 0.58744764
-        w: 0.803264
-    parentIndex: -1
-    pivotIndex: -1
-    pivotLocalMatrix:
-      c0:
-        x: 1
-        y: 0
-        z: 0
-        w: 0
-      c1:
-        x: 0
-        y: 1
-        z: 0
-        w: 0
-      c2:
-        x: 0
-        y: 0
-        z: 1
-        w: 0
-      c3:
-        x: 0
-        y: 0
-        z: 0
-        w: 1
-  - stiffnessForce: 500
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -15
-      max: 15
-    zAngleLimits:
-      active: 1
-      min: -15
-      max: 15
-    radius: 0.05
-    springLength: 0.121702895
-    boneAxis:
-      x: -0.9491951
-      y: -0.014500706
-      z: 0.31435406
-    localPosition:
-      x: -0.09258963
-      y: 0.004697499
-      z: 0.033989932
-    initialLocalRotation:
-      value:
-        x: 0.0018949228
-        y: -0.00000004179318
-        z: -0.000010949961
-        w: 0.9999982
-    parentIndex: 0
-    pivotIndex: 0
-    pivotLocalMatrix:
-      c0:
-        x: 0.9491952
-        y: 0.015671397
-        z: -0.31429726
-        w: 0
-      c1:
-        x: 0.29323494
-        y: -0.40649655
-        z: 0.86531734
-        w: 0
-      c2:
-        x: -0.11419993
-        y: -0.9135181
-        z: -0.39044002
-        w: 0
-      c3:
-        x: -0.09258964
-        y: 0.0046975026
-        z: 0.03398994
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -20
-      max: 20
-    zAngleLimits:
-      active: 1
-      min: -20
-      max: 20
-    radius: 0.05
-    springLength: 0.1281873
-    boneAxis:
-      x: -0.8943926
-      y: 0.025466928
-      z: 0.4465572
-    localPosition:
-      x: -0.11551977
-      y: -0.0017647948
-      z: 0.03825779
-    initialLocalRotation:
-      value:
-        x: 0.008538752
-        y: -0.008839696
-        z: -0.040913478
-        w: 0.9990871
-    parentIndex: 1
-    pivotIndex: 1
-    pivotLocalMatrix:
-      c0:
-        x: 0.89737993
-        y: -0.09133484
-        z: -0.4317027
-        w: 0
-      c1:
-        x: 0.31088105
-        y: -0.5634387
-        z: 0.7654344
-        w: 0
-      c2:
-        x: -0.3131488
-        y: -0.8210937
-        z: -0.47722432
-        w: 0
-      c3:
-        x: -0.11551983
-        y: -0.0017647761
-        z: 0.038257785
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -20
-      max: 20
-    zAngleLimits:
-      active: 1
-      min: -20
-      max: 20
-    radius: 0.05
-    springLength: 0.122297086
-    boneAxis:
-      x: -0.9356623
-      y: 0.013530753
-      z: 0.3526372
-    localPosition:
-      x: -0.11464979
-      y: 0.003264539
-      z: 0.057243004
-    initialLocalRotation:
-      value:
-        x: 0.016702048
-        y: -0.0041722474
-        z: -0.017277757
-        w: 0.9997026
-    parentIndex: 2
-    pivotIndex: 2
-    pivotLocalMatrix:
-      c0:
-        x: 0.9377508
-        y: -0.034243647
-        z: -0.34561643
-        w: 0
-      c1:
-        x: 0.28041032
-        y: -0.51250565
-        z: 0.81160843
-        w: 0
-      c2:
-        x: -0.20492278
-        y: -0.85800076
-        z: -0.4710004
-        w: 0
-      c3:
-        x: -0.114649944
-        y: 0.0032645452
-        z: 0.057243012
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -20
-      max: 20
-    zAngleLimits:
-      active: 1
-      min: -20
-      max: 20
-    radius: 0.05
-    springLength: 0.12229719
-    boneAxis:
-      x: -0.9356624
-      y: 0.013531519
-      z: 0.35263678
-    localPosition:
-      x: -0.11442875
-      y: 0.0016548596
-      z: 0.043126486
-    initialLocalRotation:
-      value:
-        x: 0.0000000828877
-        y: -0.00000029138755
-        z: 0.000000366912
-        w: 1
-    parentIndex: 3
-    pivotIndex: 3
-    pivotLocalMatrix:
-      c0:
-        x: 0.93566227
-        y: -0.01353081
-        z: -0.35263723
-        w: 0
-      c1:
-        x: 0.3476199
-        y: -0.13681974
-        z: 0.9275993
-        w: 0
-      c2:
-        x: -0.060799018
-        y: -0.99050325
-        z: -0.12331358
-        w: 0
-      c3:
-        x: -0.11442885
-        y: 0.0016547373
-        z: 0.043126594
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -21
-      max: 20
-    zAngleLimits:
-      active: 1
-      min: -21
-      max: 21
-    radius: 0.05
-    springLength: 0.12229679
-    boneAxis:
-      x: -0.9399656
-      y: 0.006522868
-      z: 0.34120697
-    localPosition:
-      x: -0.11442883
-      y: 0.0016549379
-      z: 0.04312651
-    initialLocalRotation:
-      value:
-        x: -0.0041399174
-        y: 0.007399886
-        z: 0.028905278
-        w: 0.99954623
-    parentIndex: 4
-    pivotIndex: 4
-    pivotLocalMatrix:
-      c0:
-        x: 0.9337029
-        y: 0.044775
-        z: -0.35523793
-        w: 0
-      c1:
-        x: 0.35729566
-        y: -0.05221126
-        z: 0.9325309
-        w: 0
-      c2:
-        x: 0.023206696
-        y: -0.9976318
-        z: -0.06474788
-        w: 0
-      c3:
-        x: -0.11442894
-        y: 0.0016548892
-        z: 0.04312647
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -22
-      max: 20
-    zAngleLimits:
-      active: 1
-      min: -22
-      max: 22
-    radius: 0.05
-    springLength: 0.122297145
-    boneAxis:
-      x: -0.9458354
-      y: -0.002623807
-      z: 0.3246359
-    localPosition:
-      x: -0.11495494
-      y: 0.00079770386
-      z: 0.04172855
-    initialLocalRotation:
-      value:
-        x: -0.005945408
-        y: 0.009106756
-        z: 0.037127428
-        w: 0.9992514
-    parentIndex: 5
-    pivotIndex: 5
-    pivotLocalMatrix:
-      c0:
-        x: 0.9371109
-        y: 0.06861842
-        z: -0.34222054
-        w: 0
-      c1:
-        x: 0.34772414
-        y: -0.09873923
-        z: 0.9323832
-        w: 0
-      c2:
-        x: 0.030188007
-        y: -0.9927451
-        z: -0.116390005
-        w: 0
-      c3:
-        x: -0.11495503
-        y: 0.0007977637
-        z: 0.041728623
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -23
-      max: 20
-    zAngleLimits:
-      active: 1
-      min: -23
-      max: 23
-    radius: 0.05
-    springLength: 0.1222971
-    boneAxis:
-      x: -0.95775235
-      y: -0.019969042
-      z: 0.2869002
-    localPosition:
-      x: -0.11567298
-      y: -0.00032088906
-      z: 0.039702076
-    initialLocalRotation:
-      value:
-        x: -0.013301302
-        y: 0.016078511
-        z: 0.07146903
-        w: 0.9972245
-    parentIndex: 6
-    pivotIndex: 6
-    pivotLocalMatrix:
-      c0:
-        x: 0.9359634
-        y: 0.14759701
-        z: -0.31966832
-        w: 0
-      c1:
-        x: 0.33858278
-        y: -0.62641495
-        z: 0.70211554
-        w: 0
-      c2:
-        x: -0.09661485
-        y: -0.76538855
-        z: -0.636275
-        w: 0
-      c3:
-        x: -0.11567308
-        y: -0.00032088885
-        z: 0.03970208
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -24
-      max: 20
-    zAngleLimits:
-      active: 1
-      min: -24
-      max: 24
-    radius: 0.05
-    springLength: 0.12229716
-    boneAxis:
-      x: -0.96607
-      y: -0.031169543
-      z: 0.2563927
-    localPosition:
-      x: -0.11713035
-      y: -0.0024421364
-      z: 0.035087116
-    initialLocalRotation:
-      value:
-        x: -0.010593481
-        y: 0.009938639
-        z: 0.049683172
-        w: 0.99865943
-    parentIndex: 7
-    pivotIndex: 7
-    pivotLocalMatrix:
-      c0:
-        x: 0.95319045
-        y: 0.12099284
-        z: -0.27710745
-        w: 0
-      c1:
-        x: 0.2746734
-        y: 0.03668895
-        z: 0.9608374
-        w: 0
-      c2:
-        x: 0.12642133
-        y: -0.991975
-        z: 0.0017380449
-        w: 0
-      c3:
-        x: -0.11713035
-        y: -0.002442182
-        z: 0.035087105
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: -25
-      max: 20
-    zAngleLimits:
-      active: 1
-      min: -25
-      max: 25
-    radius: 0.05
-    springLength: 0.12229688
-    boneAxis:
-      x: -0.97375196
-      y: -0.04079747
-      z: 0.22392556
-    localPosition:
-      x: -0.11814756
-      y: -0.0038118698
-      z: 0.031356066
-    initialLocalRotation:
-      value:
-        x: -0.011146545
-        y: 0.008510331
-        z: 0.047920085
-        w: 0.9987527
-    parentIndex: 8
-    pivotIndex: 8
-    pivotLocalMatrix:
-      c0:
-        x: 0.96165854
-        y: 0.12845437
-        z: -0.24230567
-        w: 0
-      c1:
-        x: 0.19720642
-        y: 0.29009384
-        z: 0.936459
-        w: 0
-      c2:
-        x: 0.19058369
-        y: -0.94833803
-        z: 0.2536393
-        w: 0
-      c3:
-        x: -0.11814789
-        y: -0.0038118844
-        z: 0.03135614
-        w: 1
-  - stiffnessForce: 400
-    dragForce: 0.4
-    springForce:
-      x: 0
-      y: -0.0001
-      z: 0
-    windInfluence: 1
-    angularStiffness: 100
-    yAngleLimits:
-      active: 1
-      min: 0
-      max: 0
-    zAngleLimits:
-      active: 1
-      min: 0
-      max: 0
-    radius: 0.05
-    springLength: 0.122297
-    boneAxis:
-      x: -0.0000030439364
-      y: 1
-      z: 0.00000048492245
-    localPosition:
-      x: -0.11908697
-      y: -0.004989473
-      z: 0.0273853
-    initialLocalRotation:
-      value:
-        x: -0.0000002576926
-        y: 0.00000028219074
-        z: 0.00000021430604
-        w: 1
-    parentIndex: 9
-    pivotIndex: 9
-    pivotLocalMatrix:
-      c0:
-        x: 0.0000031737356
-        y: -0.99999994
-        z: 0.00000038538974
-        w: 0
-      c1:
-        x: -0.10690059
-        y: -0.00000012714004
-        z: 0.9942698
-        w: 0
-      c2:
-        x: -0.9942699
-        y: -0.0000031153506
-        z: -0.10690068
-        w: 0
-      c3:
-        x: -0.11908687
-        y: -0.004989446
-        z: 0.027385425
-        w: 1
-  initLocalRotations:
-  - {x: 0.080959335, y: 0.05583836, z: 0.58744764, w: 0.803264}
-  - {x: 0.0018949228, y: -0.00000004179318, z: -0.000010949961, w: 0.9999982}
-  - {x: 0.008538752, y: -0.008839696, z: -0.040913478, w: 0.9990871}
-  - {x: 0.016702048, y: -0.0041722474, z: -0.017277757, w: 0.9997026}
-  - {x: 0.0000000828877, y: -0.00000029138755, z: 0.000000366912, w: 1}
-  - {x: -0.0041399174, y: 0.007399886, z: 0.028905278, w: 0.99954623}
-  - {x: -0.005945408, y: 0.009106756, z: 0.037127428, w: 0.9992514}
-  - {x: -0.013301302, y: 0.016078511, z: 0.07146903, w: 0.9972245}
-  - {x: -0.010593481, y: 0.009938639, z: 0.049683172, w: 0.99865943}
-  - {x: -0.011146545, y: 0.008510331, z: 0.047920085, w: 0.9987527}
-  - {x: -0.0000002576926, y: 0.00000028219074, z: 0.00000021430604, w: 1}
-  jobColProperties:
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
-  - type: 0
-    radius: 0
-    width: 0
-    height: 0
+  jobProperties: []
+  initLocalRotations: []
+  jobColProperties: []
   jobLengthProperties: []
 --- !u!1 &3596416410370931403
 GameObject:
@@ -4743,7 +4076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3849142124688821728}
-  - component: {fileID: 4553721951104959215}
+  - component: {fileID: 5375079859582811760}
   m_Layer: 0
   m_Name: DJ_mantle_L_06
   m_TagString: Untagged
@@ -4767,14 +4100,14 @@ Transform:
   m_Father: {fileID: 4337518650716734786}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4553721951104959215
+--- !u!114 &5375079859582811760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4553721951104959214}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -4782,8 +4115,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 8910315294078177838}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -5065,7 +4397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242812424305576076}
-  - component: {fileID: 5154028996620396516}
+  - component: {fileID: 8156612893137949904}
   m_Layer: 0
   m_Name: DJ_mantle_L_04
   m_TagString: Untagged
@@ -5089,14 +4421,14 @@ Transform:
   m_Father: {fileID: 4060461716266942544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5154028996620396516
+--- !u!114 &8156612893137949904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5154028996620396515}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -5104,8 +4436,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 4337518650716734786}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -5165,7 +4496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2659224779150569405}
-  - component: {fileID: 5718722533609440265}
+  - component: {fileID: 6351671959891909451}
   m_Layer: 0
   m_Name: DJ_mantle_L_010
   m_TagString: Untagged
@@ -5188,14 +4519,14 @@ Transform:
   m_Father: {fileID: 8833743981681235680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5718722533609440265
+--- !u!114 &6351671959891909451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5718722533609440264}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -5203,8 +4534,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 7256215185056838553}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}
@@ -6771,7 +6101,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6851790097876462731}
-  m_LocalRotation: {x: 0.8285728, y: 0.09320436, z: -0.12928773, w: 0.5367167}
+  m_LocalRotation: {x: 0.82857275, y: 0.09320437, z: -0.12928772, w: 0.5367168}
   m_LocalPosition: {x: -0.092589624, y: 0.0046974947, z: 0.033989936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6814,7 +6144,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6851790097916677142}
-  m_LocalRotation: {x: 0.71600664, y: 0.14038655, z: -0.11593161, w: 0.67393327}
+  m_LocalRotation: {x: 0.7160064, y: 0.14038642, z: -0.11593175, w: 0.6739335}
   m_LocalPosition: {x: -0.114429064, y: 0.0016548694, z: 0.043126557}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6943,7 +6273,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6851790098168549546}
-  m_LocalRotation: {x: 0.5953834, y: 0.13674423, z: -0.021717891, w: 0.79142153}
+  m_LocalRotation: {x: 0.5953835, y: 0.13674423, z: -0.021717995, w: 0.7914214}
   m_LocalPosition: {x: -0.11814775, y: -0.003811951, z: 0.031356134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7072,7 +6402,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6851790098642418989}
-  m_LocalRotation: {x: 0.73352575, y: 0.14189772, z: -0.10634684, w: 0.65612155}
+  m_LocalRotation: {x: 0.73352534, y: 0.14189754, z: -0.106347024, w: 0.65612197}
   m_LocalPosition: {x: -0.11495504, y: 0.0007977276, z: 0.041728612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7422,7 +6752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8910315294078177838}
-  - component: {fileID: 6911815231156349032}
+  - component: {fileID: 5820273884019389053}
   m_Layer: 0
   m_Name: DJ_mantle_L_07
   m_TagString: Untagged
@@ -7446,14 +6776,14 @@ Transform:
   m_Father: {fileID: 3849142124688821728}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6911815231156349032
+--- !u!114 &5820273884019389053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6911815231156349031}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1501266239, guid: 20723e7a339bef5439dcc9b34e2b3db6, type: 3}
   m_Name: 
@@ -7461,8 +6791,7 @@ MonoBehaviour:
   index: 0
   enabledJobSystem: 0
   jobColliders: []
-  validChildren:
-  - {fileID: 2538300937981956823}
+  validChildren: []
   stiffnessForce: 400
   dragForce: 0.4
   springForce: {x: 0, y: -0.0001, z: 0}

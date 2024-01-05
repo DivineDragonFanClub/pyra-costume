@@ -1,10 +1,10 @@
 using UTJ.Jobs;
+using UTJ.Support;
 
 namespace UnityChanJp.SpringBone.Runtime.Setup
 {
-    public class SpringManagerExporting(SpringJobManager manager)
+    public class SpringManagerExporting
     {
-        var managerSerializer = SpringManagerImporting.SpringManagerSerializer(manager);
-        builder.Append(boneSerializer);
+        
     }
 }
