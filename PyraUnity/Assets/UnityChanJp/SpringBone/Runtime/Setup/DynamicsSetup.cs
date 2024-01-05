@@ -327,7 +327,10 @@ namespace UTJ.Support
                 var rawManagerRecords = TextRecordParsing.GetSectionRecords(sourceRecords, "SpringJobManager");
                 var myList = new List<SpringManagerImporting.SpringManagerSerializer>();
                 DynamicsSetup.ParseMessage myError = null;
-                springManagerSerializer = DynamicsSetup.SerializeObjectFromStrings<SpringManagerImporting.SpringManagerSerializer>(rawManagerRecords[1].Items, null, ref myError);
+                if (rawManagerRecords.Count > 0)
+                {
+                    springManagerSerializer = DynamicsSetup.SerializeObjectFromStrings<SpringManagerImporting.SpringManagerSerializer>(rawManagerRecords[0].Items, null, ref myError);
+                }
             }
 
             var dynamicsSetup = new DynamicsSetup
