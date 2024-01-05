@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UTJ.Jobs;
 
 namespace UTJ
 {
@@ -19,6 +20,7 @@ namespace UTJ
         // private
 
         private GameObject springBoneRoot;
+        private GameObject prefabRoot;
         private UTJ.Support.SpringBoneSerialization.ExportSettings exportSettings;
 
         private void SelectObjectsFromSelection()
@@ -73,6 +75,8 @@ namespace UTJ
 
             springBoneRoot = LoadSpringBoneSetupWindow.DoObjectPicker(
                 "Spring Bone Root", springBoneRoot, uiWidth, UIRowHeight, ref yPos);
+            prefabRoot = LoadSpringBoneSetupWindow.DoObjectPicker(
+                "Prefab Root", prefabRoot, uiWidth, UIRowHeight, ref yPos);
             var buttonRect = new Rect(UISpacing, yPos, uiWidth, ButtonHeight);
             if (GUI.Button(buttonRect, "Get root from selection", SpringBoneGUIStyles.ButtonStyle))
             {
@@ -86,16 +90,28 @@ namespace UTJ
             {
                 if (GUI.Button(buttonRect, "Save CSV", SpringBoneGUIStyles.ButtonStyle))
                 {
-                    BrowseAndSaveSpringSetup();
+                    BrowseAndSaveSpringSetup(springBoneRoot);
+                }
+            }
+
+            if (prefabRoot != null)
+            {
+                if (GUI.Button(buttonRect, "Save Prefab CSVs", SpringBoneGUIStyles.ButtonStyle))
+                {
+                    var springBoneRoots = prefabRoot.GetComponentsInChildren<SpringJobManager>();
+                    foreach (var springBoneRoot in springBoneRoots)
+                    {
+                        BrowseAndSaveSpringSetup(springBoneRoot.gameObject);
+                    }
                 }
             }
         }
 
-        private void BrowseAndSaveSpringSetup()
+        private void BrowseAndSaveSpringSetup(GameObject myRoot)
         {
-            if (springBoneRoot == null) { return; }
+            if (myRoot == null) { return; }
 
-            var initialFileName = springBoneRoot.name + "_Dynamics.csv";
+            var initialFileName = myRoot.name + "_Dynamics.csv";
 
             var path = EditorUtility.SaveFilePanel(
                 "Save Spring Bone setup", "", initialFileName, "csv");
@@ -110,7 +126,7 @@ namespace UTJ
                 }
             }
 
-            var sourceText = UTJ.Support.SpringBoneSerialization.BuildDynamicsSetupString(springBoneRoot, exportSettings);
+            var sourceText = UTJ.Support.SpringBoneSerialization.BuildDynamicsSetupString(myRoot, exportSettings);
             if (UTJ.Support.FileUtil.WriteAllText(path, sourceText))
             {
                 AssetDatabase.Refresh();
