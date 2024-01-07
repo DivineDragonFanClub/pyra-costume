@@ -108,7 +108,7 @@ namespace UTJ
 
             if (prefabRoot != null)
             {
-                if (GUI.Button(massSaveButton, "Save Prefab CSVs", SpringBoneGUIStyles.ButtonStyle))
+                if (GUI.Button(massSaveButton, "Mass Save Prefab CSVs", SpringBoneGUIStyles.ButtonStyle))
                 {
                     var springBoneRoots = prefabRoot.GetComponentsInChildren<SpringJobManager>();
                     var path = EditorUtility.SaveFolderPanel(

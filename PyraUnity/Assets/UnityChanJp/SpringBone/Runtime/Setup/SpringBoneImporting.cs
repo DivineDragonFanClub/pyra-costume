@@ -112,6 +112,12 @@ namespace UTJ.Support
                     BuildSpringBoneFromSerializer(setupMaps, record);
                 }
 
+                // delete the old SpringJobManager if there was one
+                var oldSpringJobManager = springBoneRoot.GetComponent<SpringJobManager>();
+                if (oldSpringJobManager != null)
+                {
+                    GameObject.DestroyImmediate(oldSpringJobManager);
+                }
                 var springManager = springBoneRoot.AddComponent<SpringJobManager>();
                 if (managerProperties != null)
                 {
@@ -711,6 +717,13 @@ namespace UTJ.Support
             {
                 Debug.LogError("ボーンが見つかりません: " + baseData.boneName);
                 return false;
+            }
+            
+            // destroy the old SpringBone if there was one
+            var oldSpringBone = childBone.GetComponent<SpringBone>();
+            if (oldSpringBone != null)
+            {
+                GameObject.DestroyImmediate(oldSpringBone);
             }
 
             var springBone = childBone.gameObject.AddComponent<SpringBone>();
