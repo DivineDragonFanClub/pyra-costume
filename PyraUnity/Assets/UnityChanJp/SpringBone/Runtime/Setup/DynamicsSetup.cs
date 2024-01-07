@@ -329,7 +329,7 @@ namespace UTJ.Support
                 DynamicsSetup.ParseMessage myError = null;
                 if (rawManagerRecords.Count > 0)
                 {
-                    springManagerSerializer = DynamicsSetup.SerializeObjectFromStrings<SpringManagerImporting.SpringManagerSerializer>(rawManagerRecords[0].Items, null, ref myError);
+                    springManagerSerializer = DynamicsSetup.SerializeObjectFromStrings<SpringManagerImporting.SpringManagerSerializer>(rawManagerRecords[1].Items, null, ref myError);
                 }
             }
 

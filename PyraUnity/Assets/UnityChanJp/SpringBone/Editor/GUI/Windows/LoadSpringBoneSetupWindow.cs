@@ -16,6 +16,7 @@ namespace UTJ
             if (editorWindow != null)
             {
                 editorWindow.SelectObjectsFromSelection();
+                editorWindow.SelectPrefabFromSelection();
             }
         }
 
@@ -68,6 +69,14 @@ namespace UTJ
                     .Where(component => component != null)
                     .Select(component => component.gameObject)
                     .FirstOrDefault();
+            }
+        }
+
+        private void SelectPrefabFromSelection()
+        {
+            if (Selection.objects.Length > 0)
+            {
+                prefabRoot = Selection.objects[0] as GameObject;
             }
         }
 
