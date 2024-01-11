@@ -148,7 +148,9 @@ namespace UTJ.Support
                 }
                 SpringBoneSetupUTJ.FindAndAssignSpringBones(springManager);
                 CachedJobParam(springManager);
+#if UNITY_EDITOR
                 EditorUtility.SetDirty(springManager);
+#endif
             }
             
             private static SpringBone[] FindSpringBones(SpringJobManager manager, bool includeInactive = false) {

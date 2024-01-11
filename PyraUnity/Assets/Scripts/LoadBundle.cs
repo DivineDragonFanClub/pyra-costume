@@ -11,6 +11,7 @@ public class LoadBundle : MonoBehaviour
     
     public void LoadAssetBundle()
     {
+#if UNITY_EDITOR
         var bundlePathToLoad = EditorUtility.OpenFilePanelWithFilters("Choose a bundle to load", Application.streamingAssetsPath, new[] {"AssetBundle", "bundle"});
         if (bundlePathToLoad == null)
         {
@@ -32,6 +33,7 @@ public class LoadBundle : MonoBehaviour
         loadedPrefab = myLoadedAssetBundle.LoadAsset<GameObject>(names[0]);
         createdObject = Instantiate(loadedPrefab);
         PrefabUtility.SaveAsPrefabAsset(createdObject, System.IO.Path.Combine("Assets", "AssetName.prefab"));
+#endif
     }
 
     public void UnloadAssetBundles()
