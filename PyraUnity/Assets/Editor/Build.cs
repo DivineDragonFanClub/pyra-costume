@@ -43,10 +43,19 @@ namespace DivineDragon
             var outputDirectory = DivineDragonSettingsScriptableObject.instance.outputPath;
 
             var args = String.Format("fix {0} {1}", outputDirectory, result.OutputPath);
-            
 
+            var bundleTools = "bundle_tools";
+            // get the platform that this editor is running on
+            var platform = Application.platform;
+            
+            // if the platform is windows, append .exe to the bundle_tools name
+            if (platform == RuntimePlatform.WindowsEditor)
+            {
+                bundleTools += ".exe";
+            }
+            
+            RunProcess(bundleTools, false, args);
             EditorUtility.RevealInFinder(outputDirectory);
-            RunProcess("bundle_tools", false, args);
 
             return success;
         }
@@ -91,7 +100,12 @@ namespace DivineDragon
                     string errors = p.StandardError.ReadToEnd().Trim();
                     if (!string.IsNullOrEmpty(errors))
                     {
-                        UnityEngine.Debug.Log(string.Format("{0} Output: {1}", DateTime.Now, errors));
+                        // Split output into lines and debug log each line
+                        string[] lines = errors.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                        foreach (string line in lines)
+                        {
+                            UnityEngine.Debug.Log(string.Format("{0} Output: {1}", DateTime.Now, line));
+                        }
                     }
                 }
             }
