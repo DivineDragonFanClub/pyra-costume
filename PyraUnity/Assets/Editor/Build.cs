@@ -4,6 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEditor.AddressableAssets.Build;
 using UnityEditor.AddressableAssets.Settings;
+using UnityEngine;
 using Debug = UnityEngine.Debug;
 
 namespace DivineDragon
@@ -14,6 +15,19 @@ namespace DivineDragon
         public static void BuildAddressables()
         {
             buildAddressableContent();
+        }
+        
+        [MenuItem("Divine Dragon/Set Output Path")]
+        public static void SetOutputPath()
+        {
+            var outputPath = EditorUtility.OpenFolderPanel("Choose a folder to save the output to", "", "");
+            if (outputPath == null)
+            {
+                Debug.Log("no path to asset bundle?");
+                return;
+            }
+            DivineDragonSettingsScriptableObject.instance.outputPath = outputPath;
+            Debug.Log(DivineDragonSettingsScriptableObject.instance.outputPath);
         }
         static bool buildAddressableContent()
         {
@@ -26,7 +40,7 @@ namespace DivineDragon
                 Debug.LogError("Addressables build error encountered: " + result.Error);
             }
             
-            var outputDirectory = Directory.GetCurrentDirectory() + "/bundle_tools_output";
+            var outputDirectory = DivineDragonSettingsScriptableObject.instance.outputPath;
 
             var args = String.Format("fix {0} {1}", outputDirectory, result.OutputPath);
             
