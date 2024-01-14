@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace DivineDragon
 {
-    [CreateAssetMenu(fileName = "DivineDragonSettings", menuName = "Divine Dragon/Initialize Divine Dragon", order = 1)]
-    public class DivineDragonSettingsScriptableObject : ScriptableObject
+    [FilePath("DivineDragon/StateFile.foo", FilePathAttribute.Location.PreferencesFolder)]
+    public class DivineDragonSettingsScriptableObject : ScriptableSingleton<DivineDragonSettingsScriptableObject>
     {
         public string outputPath;
     }
