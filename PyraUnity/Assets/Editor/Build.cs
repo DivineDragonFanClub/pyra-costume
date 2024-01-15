@@ -14,22 +14,10 @@ namespace DivineDragon
         [MenuItem("Divine Dragon/Build Addressables")]
         public static void BuildAddressables()
         {
-            buildAddressableContent();
+            BuildAddressableContent();
         }
         
-        [MenuItem("Divine Dragon/Set Output Path")]
-        public static void SetOutputPath()
-        {
-            var outputPath = EditorUtility.OpenFolderPanel("Choose a folder to save the output to", "", "");
-            if (outputPath == null)
-            {
-                Debug.Log("no path to asset bundle?");
-                return;
-            }
-            DivineDragonSettingsScriptableObject.instance.outputPath = outputPath;
-            Debug.Log(DivineDragonSettingsScriptableObject.instance.outputPath);
-        }
-        static bool buildAddressableContent()
+        public static bool BuildAddressableContent()
         {
             AddressableAssetSettings
                 .BuildPlayerContent(out AddressablesPlayerBuildResult result);
@@ -38,9 +26,10 @@ namespace DivineDragon
             if (!success)
             {
                 Debug.LogError("Addressables build error encountered: " + result.Error);
+                return false;
             }
             
-            var outputDirectory = DivineDragonSettingsScriptableObject.instance.outputPath;
+            var outputDirectory = DivineDragonSettingsScriptableObject.instance.bundleOutputPath;
 
             var args = String.Format("fix {0} {1}", outputDirectory, result.OutputPath);
 
