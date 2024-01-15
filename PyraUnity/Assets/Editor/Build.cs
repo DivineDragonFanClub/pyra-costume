@@ -29,7 +29,7 @@ namespace DivineDragon
                 return false;
             }
             
-            var outputDirectory = DivineDragonSettingsScriptableObject.instance.bundleOutputPath;
+            var outputDirectory = DivineDragonSettingsScriptableObject.instance.getBundleOutputPath();
 
             var args = String.Format("fix \"{0}\" \"{1}\"", outputDirectory, result.OutputPath);
             

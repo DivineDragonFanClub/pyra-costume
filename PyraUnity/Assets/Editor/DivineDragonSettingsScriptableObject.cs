@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -6,10 +7,21 @@ using UnityEngine.UIElements;
 
 namespace DivineDragon
 {
-    [FilePath("Assets/Editor/DivineSettings.asset", FilePathAttribute.Location.ProjectFolder)]
+    [FilePath("Assets/Editor/DivineSettings.settings", FilePathAttribute.Location.ProjectFolder)]
     public class DivineDragonSettingsScriptableObject : ScriptableSingleton<DivineDragonSettingsScriptableObject>
     {
-        public string bundleOutputPath;
+        [SerializeField]
+        string bundleOutputPath;
+        
+        public String getBundleOutputPath()
+        {
+            return bundleOutputPath;
+        }
+        public void setBundleOutputPath(string path)
+        {
+            bundleOutputPath = path;
+            Save(true);
+        }
     }
 
     /// <summary>
@@ -49,12 +61,12 @@ namespace DivineDragon
         {
             TextField bundleOutputField = divineWindow.Q<TextField>("BundleOutputField");
             
-            bundleOutputField.value = DivineDragonSettingsScriptableObject.instance.bundleOutputPath;
+            bundleOutputField.value = DivineDragonSettingsScriptableObject.instance.getBundleOutputPath();
             
             // reflect edits of the field back to the scriptable object
             bundleOutputField.RegisterValueChangedCallback(evt =>
             {
-                DivineDragonSettingsScriptableObject.instance.bundleOutputPath = evt.newValue;
+                DivineDragonSettingsScriptableObject.instance.setBundleOutputPath(evt.newValue);
             });
         }
         
@@ -70,8 +82,8 @@ namespace DivineDragon
                     Debug.Log("no path to output?");
                     return;
                 }
-                DivineDragonSettingsScriptableObject.instance.bundleOutputPath = outputPath;
-                Debug.Log("Set the output path to " + DivineDragonSettingsScriptableObject.instance.bundleOutputPath);
+                DivineDragonSettingsScriptableObject.instance.setBundleOutputPath(outputPath);
+                Debug.Log("Set the output path to " + DivineDragonSettingsScriptableObject.instance.getBundleOutputPath());
             };
         }
         
@@ -81,7 +93,7 @@ namespace DivineDragon
             
             openOutputButton.clickable.clicked += () =>
             {
-                EditorUtility.OpenWithDefaultApp(DivineDragonSettingsScriptableObject.instance.bundleOutputPath);
+                EditorUtility.OpenWithDefaultApp(DivineDragonSettingsScriptableObject.instance.getBundleOutputPath());
             };
         }
         
