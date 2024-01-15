@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 namespace DivineDragon
 {
-    [FilePath("DivineDragon/StateFile.foo", FilePathAttribute.Location.PreferencesFolder)]
+    [FilePath("Assets/Editor/DivineSettings.asset", FilePathAttribute.Location.ProjectFolder)]
     public class DivineDragonSettingsScriptableObject : ScriptableSingleton<DivineDragonSettingsScriptableObject>
     {
         public string bundleOutputPath;
