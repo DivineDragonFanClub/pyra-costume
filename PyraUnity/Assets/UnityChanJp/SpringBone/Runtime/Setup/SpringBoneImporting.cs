@@ -699,6 +699,12 @@ namespace UTJ.Support
                     var pivotGameObject = new GameObject(serializer.name, typeof(SpringBonePivot));
                     pivot = pivotGameObject.transform;
                     pivot.parent = parent;
+                } else
+                {
+                    if (pivot.GetComponent<SpringBonePivot>() == null)
+                    {
+                        pivot.gameObject.AddComponent<SpringBonePivot>();
+                    }
                 }
                 pivot.localScale = Vector3.one;
                 pivot.localEulerAngles = serializer.eulerAngles;
