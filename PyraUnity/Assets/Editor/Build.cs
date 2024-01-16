@@ -17,6 +17,13 @@ namespace DivineDragon
             BuildAddressableContent();
         }
         
+        [MenuItem("Divine Dragon/Build Addressables", true)]
+        static bool ValidateBuildAddressables()
+        {
+            // Return false if no bundle output path is set
+            return !string.IsNullOrEmpty(DivineDragonSettingsScriptableObject.instance.getBundleOutputPath());
+        }
+        
         public static bool BuildAddressableContent()
         {
             AddressableAssetSettings
@@ -45,7 +52,10 @@ namespace DivineDragon
             }
             
             RunProcess(bundleTools, false, args);
-            EditorUtility.RevealInFinder(outputDirectory);
+            if (DivineDragonSettingsScriptableObject.instance.getOpenAfterBuild())
+            {
+                EditorUtility.RevealInFinder(outputDirectory);
+            }
 
             return success;
         }

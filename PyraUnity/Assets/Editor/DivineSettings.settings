@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183553dfcfc7439280fb8ba36d7d286b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bundleOutputPath: /Users/doge/Library/Application Support/Ryujinx/sdcard/engage/mods/pyra/Data/StreamingAssets/aa/Switch
+  bundleOutputPath: /Users/doge/workspace/pyra-costume/PyraUnity
+  openAfterBuildCheckbox: 0

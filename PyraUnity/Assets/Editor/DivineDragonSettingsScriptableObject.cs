@@ -12,10 +12,23 @@ namespace DivineDragon
     {
         [SerializeField]
         string bundleOutputPath;
+
+        [SerializeField] private bool openAfterBuildCheckbox;
         
         public String getBundleOutputPath()
         {
             return bundleOutputPath;
+        }
+        
+        public void setOpenAfterBuild(bool openAfterBuild)
+        {
+            openAfterBuildCheckbox = openAfterBuild;
+            Save(true);
+        }
+        
+        public bool getOpenAfterBuild()
+        {
+            return openAfterBuildCheckbox;
         }
         public void setBundleOutputPath(string path)
         {
@@ -29,6 +42,8 @@ namespace DivineDragon
     /// </summary>
     public class SettingsWindow: EditorWindow
     {
+        private TextField bundleOutputPathField;
+        
         [MenuItem("Divine Dragon/Divine Dragon Window")]
         public static void ShowSettings()
         {
@@ -53,14 +68,25 @@ namespace DivineDragon
             InitializeBrowseButton(divineWindow);
             InitializeOpenOutputButton(divineWindow);
             InitializeBuildButton(divineWindow);
-            
-            
+            InitializeOpenAfterBuildCheckbox(divineWindow);
+
         }
-        
+
+        private void InitializeOpenAfterBuildCheckbox(VisualElement divineWindow)
+        {
+            Toggle openAfterBuildCheckbox = divineWindow.Q<Toggle>("openAfterBuildCheckbox");
+            openAfterBuildCheckbox.value = DivineDragonSettingsScriptableObject.instance.getOpenAfterBuild();
+            openAfterBuildCheckbox.RegisterValueChangedCallback(evt =>
+            {
+                DivineDragonSettingsScriptableObject.instance.setOpenAfterBuild(evt.newValue);
+            });
+        }
+
         private void InitializeBundleOutputField(VisualElement divineWindow)
         {
             TextField bundleOutputField = divineWindow.Q<TextField>("BundleOutputField");
             
+            bundleOutputPathField = bundleOutputField;
             bundleOutputField.value = DivineDragonSettingsScriptableObject.instance.getBundleOutputPath();
             
             // reflect edits of the field back to the scriptable object
@@ -83,6 +109,7 @@ namespace DivineDragon
                     return;
                 }
                 DivineDragonSettingsScriptableObject.instance.setBundleOutputPath(outputPath);
+                bundleOutputPathField.value = outputPath;
                 Debug.Log("Set the output path to " + DivineDragonSettingsScriptableObject.instance.getBundleOutputPath());
             };
         }
@@ -103,6 +130,11 @@ namespace DivineDragon
             
             buildButton.clickable.clicked += () =>
             {
+                if (String.IsNullOrEmpty(DivineDragonSettingsScriptableObject.instance.getBundleOutputPath()))
+                {
+                    EditorUtility.DisplayDialog("Error", "No output path set - please set one in this window", "OK");
+                    return;
+                }
                 Build.BuildAddressableContent();
             };
         }
