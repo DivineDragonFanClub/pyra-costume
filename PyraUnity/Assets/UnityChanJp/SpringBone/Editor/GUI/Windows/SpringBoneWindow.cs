@@ -41,7 +41,8 @@ namespace UTJ
             var iconTexture = AssetDatabase.LoadAssetAtPath<Texture>(iconPath);
             if (iconTexture == null)
             {
-                Debug.LogWarning("Failed to load the icon:\n" + iconPath);
+                // Silence complaints about icons not being found
+                // Debug.LogWarning("Failed to load the icon:\n" + iconPath);
             }
             return iconTexture;
         }

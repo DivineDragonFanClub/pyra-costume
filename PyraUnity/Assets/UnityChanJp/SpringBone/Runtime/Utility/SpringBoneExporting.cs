@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UTJ.Jobs;
 
 namespace UTJ.Support
 {
@@ -16,6 +17,8 @@ namespace UTJ.Support
 
             public bool ExportSpringBones { get; set; }
             public bool ExportCollision { get; set; }
+            
+            public bool ExportManager { get; set; }
         }
 
         public static string BuildDynamicsSetupString(GameObject rootObject, ExportSettings exportSettings = null)
@@ -42,8 +45,53 @@ namespace UTJ.Support
                 builder.Append(SpringColliderSerialization.BuildCollisionSetupString(rootObject));
             }
 
+            if (true)
+            {
+                var csvBuilder = new CSVBuilder();
+                csvBuilder.AppendLine("[SpringJobManager]");
+
+                string[] springJobManagerHeaderRow = {
+                    "isPaused",
+                    "simulationFrameRate",
+                    "dynamicRatio",
+                    "gravity x",
+                    "gravity y",
+                    "gravity z",
+                    "bounce",
+                    "friction",
+                    "enableAngleLimits",
+                    "enableCollision",
+                    "enableLengthLimits",
+                    "collideWithGround",
+                    "groundHeight",
+                    "windDisabled",
+                    "windInfluence",
+                    "windPower x",
+                    "windPower y",
+                    "windPower z",
+                    "windDir x",
+                    "windDir y",
+                    "windDir z",
+                    "distanceRate x",
+                    "distanceRate y",
+                    "distanceRate z",
+                    "automaticReset",
+                    "resetDistance",
+                    "resetAngle",
+                };
+
+                csvBuilder.AppendLine(springJobManagerHeaderRow);
+                var springJobManager = rootObject.GetComponent<SpringJobManager>();
+                csvBuilder.Append(SpringManagerImporting.ManagerToSerializer(springJobManager));
+                builder.Append(csvBuilder);
+            }
+
             return builder.ToString();
         }
+        
+        
+
+      
 
         // private
 

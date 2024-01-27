@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UTJ.Jobs;
 using UTJ.Support.GameObjectExtensions;
@@ -88,7 +89,7 @@ namespace UTJ.Support
                 };
             }
 
-            public void BuildObjects(GameObject springBoneRoot, GameObject colliderRoot, IEnumerable<string> requiredBones)
+            public void BuildObjects(GameObject springBoneRoot, GameObject colliderRoot, IEnumerable<string> requiredBones, SpringManagerImporting.SpringManagerSerializer springManagerSerializer)
             {
                 var managerProperties = PersistentSpringManagerProperties.Create(
                     springBoneRoot.GetComponentInChildren<SpringManager>());
@@ -111,13 +112,190 @@ namespace UTJ.Support
                     BuildSpringBoneFromSerializer(setupMaps, record);
                 }
 
+                // delete the old SpringJobManager if there was one
+                var oldSpringJobManager = springBoneRoot.GetComponent<SpringJobManager>();
+                if (oldSpringJobManager != null)
+                {
+                    GameObject.DestroyImmediate(oldSpringJobManager);
+                }
                 var springManager = springBoneRoot.AddComponent<SpringJobManager>();
                 if (managerProperties != null)
                 {
                     managerProperties.ApplyTo(springManager);
                 }
+                if (springManagerSerializer != null)
+                {
+                    // use the new serializer
+                    springManager.isPaused = springManagerSerializer.isPaused;
+                    springManager.simulationFrameRate = springManagerSerializer.simulationFrameRate;
+                    springManager.dynamicRatio = springManagerSerializer.dynamicRatio;
+                    springManager.gravity = springManagerSerializer.gravity;
+                    springManager.bounce = springManagerSerializer.bounce;
+                    springManager.friction = springManagerSerializer.friction;
+                    springManager.enableAngleLimits = springManagerSerializer.enableAngleLimits;
+                    springManager.enableCollision = springManagerSerializer.enableCollision;
+                    springManager.enableLengthLimits = springManagerSerializer.enableLengthLimits;
+                    springManager.collideWithGround = springManagerSerializer.collideWithGround;
+                    springManager.groundHeight = springManagerSerializer.groundHeight;
+                    springManager.windDisabled = springManagerSerializer.windDisabled;
+                    springManager.windInfluence = springManagerSerializer.windInfluence;
+                    springManager.windPower = springManagerSerializer.windPower;
+                    springManager.windDir = springManagerSerializer.windDir;
+                    springManager.distanceRate = springManagerSerializer.distanceRate;
+                    springManager.automaticReset = springManagerSerializer.automaticReset;
+                    springManager.resetDistance = springManagerSerializer.resetDistance;
+                    springManager.resetAngle = springManagerSerializer.resetAngle;
+                }
                 SpringBoneSetupUTJ.FindAndAssignSpringBones(springManager);
+                CachedJobParam(springManager);
+#if UNITY_EDITOR
+                EditorUtility.SetDirty(springManager);
+#endif
             }
+            
+            private static SpringBone[] FindSpringBones(SpringJobManager manager, bool includeInactive = false) {
+                var unsortedSpringBones = manager.GetComponentsInChildren<SpringBone>(includeInactive);
+                var boneDepthList = unsortedSpringBones
+                    .Select(bone => new { bone, depth = GetObjectDepth(bone.transform) })
+                    .ToList();
+                boneDepthList.Sort((a, b) => a.depth.CompareTo(b.depth));
+                return boneDepthList.Select(item => item.bone).ToArray();
+            }
+
+            private static int GetObjectDepth(Transform inObject) {
+                var depth = 0;
+                var currentObject = inObject;
+                while (currentObject != null) {
+                    currentObject = currentObject.parent;
+                    ++depth;
+                }
+                return depth;
+            }
+            
+            private static void CachedJobParam(SpringJobManager manager) {
+            manager.SortedBones = FindSpringBones(manager);
+            var nSpringBones = manager.SortedBones.Length;
+
+            manager.jobProperties = new SpringBoneProperties[nSpringBones];
+            manager.initLocalRotations = new Quaternion[nSpringBones];
+            manager.jobColProperties = new SpringColliderProperties[nSpringBones];
+            //manager.jobLengthProperties = new LengthLimitProperties[nSpringBones][];
+            var jobLengthPropertiesList = new List<LengthLimitProperties>();
+
+            for (var i = 0; i < nSpringBones; ++i) {
+                SpringBone springBone = manager.SortedBones[i];
+                //springBone.index = i;
+
+                var root = springBone.transform;
+                var parent = root.parent;
+
+                //var childPos = ComputeChildBonePosition(springBone);
+                var childPos = springBone.ComputeChildPosition();
+                var childLocalPos = root.InverseTransformPoint(childPos);
+                var boneAxis = Vector3.Normalize(childLocalPos);
+
+                var worldPos = root.position;
+                //var worldRot = root.rotation;
+
+                var springLength = Vector3.Distance(worldPos, childPos);
+                var currTipPos = childPos;
+                var prevTipPos = childPos;
+
+                // Length Limit
+                var targetCount = springBone.lengthLimitTargets.Length;
+                //manager.jobLengthProperties[i] = new LengthLimitProperties[targetCount];
+                if (targetCount > 0) {
+                    for (int m = 0; m < targetCount; ++m) {
+                        var targetRoot = springBone.lengthLimitTargets[m];
+                        int targetIndex = -1;
+                        // NOTE: 
+                        //if (targetRoot.TryGetComponent<SpringBone>(out var targetBone))
+                            //targetIndex = targetBone.index;
+                        var prop = new LengthLimitProperties {
+                            targetIndex = targetIndex,
+                            target = Vector3.Magnitude(targetRoot.position - childPos),
+                        };
+                        jobLengthPropertiesList.Add(prop);
+                    }
+                }
+
+                // ReadOnly
+                int parentIndex = -1;
+                int pivotIndex = -1;
+
+                Matrix4x4 pivotLocalMatrix = Matrix4x4.identity;
+                if (parent.TryGetComponent<SpringBone>(out var parentBone))
+                {
+                    parentIndex = Array.FindIndex(manager.SortedBones, b => b == parentBone);
+                    pivotIndex = parentIndex;
+                }
+
+                var pivotTransform = GetPivotTransform(springBone);
+                var pivotBone = pivotTransform.GetComponentInParent<SpringBone>();
+                if (pivotBone != null)
+                {
+//        var nsbEnabledJobField = nsb.GetType().GetField("enabledJobSystem", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+// 
+                    // NOTE: PivotがSpringBoneの子供に置かれている場合の対処
+                    if (pivotBone.transform != pivotTransform) {
+                        // NOTE: 1個上の親がSpringBoneとは限らない
+                        //pivotLocalMatrix = Matrix4x4.TRS(pivotTransform.localPosition, pivotTransform.localRotation, Vector3.one);
+                        pivotLocalMatrix = Matrix4x4.Inverse(pivotBone.transform.localToWorldMatrix) * pivotTransform.localToWorldMatrix;
+                    }
+                }
+
+                // ReadOnly
+                manager.jobProperties[i] = new SpringBoneProperties {
+                    stiffnessForce = springBone.stiffnessForce,
+                    dragForce = springBone.dragForce,
+                    springForce = springBone.springForce,
+                    windInfluence = springBone.windInfluence,
+                    angularStiffness = springBone.angularStiffness,
+                    yAngleLimits = new AngleLimitComponent {
+                        active = springBone.yAngleLimits.active,
+                        min = springBone.yAngleLimits.min,
+                        max = springBone.yAngleLimits.max,
+                    },
+                    zAngleLimits = new AngleLimitComponent {
+                        active = springBone.zAngleLimits.active,
+                        min = springBone.zAngleLimits.min,
+                        max = springBone.zAngleLimits.max,
+                    },
+                    radius = springBone.radius,
+                    boneAxis = boneAxis,
+                    springLength = springLength,
+                    localPosition = root.localPosition,
+                    initialLocalRotation = root.localRotation,
+                    parentIndex = parentIndex,
+
+                    pivotIndex = pivotIndex,
+                    pivotLocalMatrix = pivotLocalMatrix,
+                };
+
+                manager.initLocalRotations[i] = root.localRotation;
+
+                // turn off SpringBone component to let Job work
+                springBone.enabled = false;
+                //springBone.enabledJobSystem = true;
+            }
+
+            // Colliders
+            manager.jobColliders = manager.GetComponentsInChildren<SpringCollider>(true);
+            int nColliders = manager.jobColliders.Length;
+            for (int i = 0; i < nColliders; ++i) {
+                //manager.jobColliders[i].index = i;
+                var comp = new SpringColliderProperties() {
+                    type = manager.jobColliders[i].type,
+                    radius = manager.jobColliders[i].radius,
+                    width = manager.jobColliders[i].width,
+                    height = manager.jobColliders[i].height,
+                };
+                manager.jobColProperties[i] = comp;
+            }
+
+            // LengthLimits
+            manager.jobLengthProperties = jobLengthPropertiesList.ToArray();
+        }
 
             // private
 
@@ -155,6 +333,15 @@ namespace UTJ.Support
 
                 springBoneRecords = boneRecordsToUse;
             }
+        }
+        
+        public static Transform GetPivotTransform(SpringBone bone)
+        {
+            if (bone.pivotNode == null)
+            {
+                bone.pivotNode = bone.transform.parent ?? bone.transform;
+            }
+            return bone.pivotNode;
         }
  
         // private
@@ -262,7 +449,38 @@ namespace UTJ.Support
         {
             
         }
-
+        
+        public static string SerializeSpringBoneManager(GameObject managerRoot)
+        {
+            var builder = new System.Text.StringBuilder();
+            var springBones = managerRoot.GetComponentsInChildren<SpringJobManager>(true);
+            builder.Append("[Manager]");
+            builder.Append("");
+            string[] springBoneHeaderRow = {
+                "// manager",
+                "optimizeTransform",
+                "isPaused",
+                "simulationFrameRate",
+                "dynamicRatio",
+                "gravity x",
+                "gravity y",
+                "gravity z",
+                "bounce",
+                "friction",
+                "time",
+                "enableAngleLimits",
+                "enableCollision",
+                "enableLengthLimits",
+                "collideWithGround",
+                "groundHeight",
+                "windDisabled",
+                "windInfluence",
+                "windPower x",
+                "windPower y",
+                "windPower z",
+            };
+            return builder.ToString();
+        }
         private class SpringBoneSerializer
         {
             public SpringBoneBaseSerializer baseData;
@@ -481,6 +699,12 @@ namespace UTJ.Support
                     var pivotGameObject = new GameObject(serializer.name, typeof(SpringBonePivot));
                     pivot = pivotGameObject.transform;
                     pivot.parent = parent;
+                } else
+                {
+                    if (pivot.GetComponent<SpringBonePivot>() == null)
+                    {
+                        pivot.gameObject.AddComponent<SpringBonePivot>();
+                    }
                 }
                 pivot.localScale = Vector3.one;
                 pivot.localEulerAngles = serializer.eulerAngles;
@@ -501,6 +725,13 @@ namespace UTJ.Support
             {
                 Debug.LogError("ボーンが見つかりません: " + baseData.boneName);
                 return false;
+            }
+            
+            // destroy the old SpringBone if there was one
+            var oldSpringBone = childBone.GetComponent<SpringBone>();
+            if (oldSpringBone != null)
+            {
+                GameObject.DestroyImmediate(oldSpringBone);
             }
 
             var springBone = childBone.gameObject.AddComponent<SpringBone>();
