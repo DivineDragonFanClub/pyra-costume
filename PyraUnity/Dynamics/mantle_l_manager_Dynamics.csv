@@ -1,0 +1,32 @@
+version,4
+
+[SpringBones]
+// bone,radius,stiffnessForce,dragForce,springForce x,springForce y,springForce z,wind influence,pivot node,use y angle limit,y angle min,y angle max,use z angle limit,z angle min,z angle max,angle stiffness,length limit count,length limit target,length limit ratio x N,collider x N
+DJ_mantle_L_00,0.05,500,0.4,0,-0.0001,0,1,DJ_mantle_L_00_Pivot,True,0,0,True,0,0,100,0
+DJ_mantle_L_01,0.05,500,0.4,0,-0.0001,0,1,DJ_mantle_L_01_Pivot,True,-15,15,True,-15,15,100,0
+DJ_mantle_L_02,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_02_Pivot,True,-20,20,True,-20,20,100,0
+DJ_mantle_L_03,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_03_Pivot,True,-20,20,True,-20,20,100,0
+DJ_mantle_L_04,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_04_Pivot,True,-20,20,True,-20,20,100,0
+DJ_mantle_L_05,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_05_Pivot,True,-21,20,True,-21,21,100,0
+DJ_mantle_L_06,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_06_Pivot,True,-22,20,True,-22,22,100,0
+DJ_mantle_L_07,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_07_Pivot,True,-23,20,True,-23,23,100,0
+DJ_mantle_L_08,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_08_Pivot,True,-24,20,True,-24,24,100,0
+DJ_mantle_L_09,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_09_Pivot,True,-25,20,True,-25,25,100,0
+DJ_mantle_L_010,0.05,400,0.4,0,-0.0001,0,1,DJ_mantle_L_010_Pivot,True,0,0,True,0,0,100,0
+
+[Pivots]
+// PivotName,ParentName,local rotation x,y,z
+DJ_mantle_L_00_Pivot,mantle_l_manager,17.09351,91.99204,70.58768
+DJ_mantle_L_01_Pivot,DJ_mantle_L_00,65.99615,196.3037,177.7922
+DJ_mantle_L_02_Pivot,DJ_mantle_L_01,55.19442,213.2724,189.2077
+DJ_mantle_L_03_Pivot,DJ_mantle_L_02,59.09285,203.5129,183.8226
+DJ_mantle_L_04_Pivot,DJ_mantle_L_03,82.09753,206.2453,185.6479
+DJ_mantle_L_05_Pivot,DJ_mantle_L_04,86.05608,160.2814,139.3844
+DJ_mantle_L_06_Pivot,DJ_mantle_L_05,83.09406,165.4596,145.2028
+DJ_mantle_L_07_Pivot,DJ_mantle_L_06,49.94157,188.6341,166.7417
+DJ_mantle_L_08_Pivot,DJ_mantle_L_07,82.73647,89.21236,73.13101
+DJ_mantle_L_09_Pivot,DJ_mantle_L_08,71.50261,36.92108,23.88391
+DJ_mantle_L_010_Pivot,DJ_mantle_L_09,0.0001878302,263.8633,270
+[SpringJobManager]
+isPaused,simulationFrameRate,dynamicRatio,gravity x,gravity y,gravity z,bounce,friction,enableAngleLimits,enableCollision,enableLengthLimits,collideWithGround,groundHeight,windDisabled,windInfluence,windPower x,windPower y,windPower z,windDir x,windDir y,windDir z,distanceRate x,distanceRate y,distanceRate z,automaticReset,resetDistance,resetAngle
+False,60,1,0,-10,0,0,1,True,True,True,True,0,False,1,30,1,1,0.3,0,0,30,0,0,True,1,60
