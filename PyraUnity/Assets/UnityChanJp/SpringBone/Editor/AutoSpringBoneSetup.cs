@@ -1,9 +1,10 @@
-﻿using UTJ.GameObjectExtensions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UTJ.Jobs;
+using UTJ.Support;
+using UTJ.Support.GameObjectExtensions;
 
 namespace UTJ
 {
@@ -41,7 +42,7 @@ namespace UTJ
             var boneListPath = FindCharacterBoneListPath(rootObject);
             if (boneListPath.Length > 0)
             {
-                var boneListText = FileUtil.ReadAllText(boneListPath);
+                var boneListText = UTJ.Support.FileUtil.ReadAllText(boneListPath);
                 var boneNames = GetDynamicsBoneNamesFromBoneList(boneListText).ToArray();
                 var dynamicsBones = new List<GameObject>(boneNames.Count());
                 var allNodes = rootObject.GetComponentsInChildren<Transform>(true);

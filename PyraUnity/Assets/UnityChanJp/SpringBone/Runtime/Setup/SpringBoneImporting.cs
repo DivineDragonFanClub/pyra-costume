@@ -93,7 +93,7 @@ namespace UTJ.Support
             {
                 var managerProperties = PersistentSpringManagerProperties.Create(
                     springBoneRoot.GetComponentInChildren<SpringManager>());
-                SpringBoneSetup.DestroySpringManagersAndBones(springBoneRoot);
+                SpringBoneSetupUTJ.DestroySpringManagersAndBones(springBoneRoot);
 
                 if (requiredBones != null)
                 {
@@ -320,7 +320,7 @@ namespace UTJ.Support
                 foreach (var bone in bonesWithoutRecords)
                 {
                     var springBone = bone.AddComponent<SpringBone>();
-                    SpringBoneSetup.CreateSpringPivotNode(springBone);
+                    SpringBoneSetupUTJ.CreateSpringPivotNode(springBone);
                 }
 
                 // Report the skipped bone records so the user knows
