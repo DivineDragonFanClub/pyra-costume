@@ -1,8 +1,9 @@
-﻿using UTJ.GameObjectExtensions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UTJ.Support;
+using UTJ.Support.GameObjectExtensions;
 
 namespace UTJ
 {

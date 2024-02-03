@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Address: CustomRP/Shaders/Common/Shadow.shader
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: de8bf3cb2cc944e619e36389510e68af
+  - m_GUID: 13085d20faabc4f7c9280c11d9e834f6
     m_Address: Unit/Model/uBody/Pyr0AF/c000/Prefabs/uBody_Pyr0AF_c000
     m_ReadOnly: 0
     m_SerializedLabels: []

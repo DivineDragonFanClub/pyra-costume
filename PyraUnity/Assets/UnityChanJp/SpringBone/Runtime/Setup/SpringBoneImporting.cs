@@ -93,7 +93,7 @@ namespace UTJ.Support
             {
                 var managerProperties = PersistentSpringManagerProperties.Create(
                     springBoneRoot.GetComponentInChildren<SpringManager>());
-                SpringBoneSetup.DestroySpringManagersAndBones(springBoneRoot);
+                SpringBoneSetupUTJ.DestroySpringManagersAndBones(springBoneRoot);
 
                 if (requiredBones != null)
                 {
@@ -320,7 +320,7 @@ namespace UTJ.Support
                 foreach (var bone in bonesWithoutRecords)
                 {
                     var springBone = bone.AddComponent<SpringBone>();
-                    SpringBoneSetup.CreateSpringPivotNode(springBone);
+                    SpringBoneSetupUTJ.CreateSpringPivotNode(springBone);
                 }
 
                 // Report the skipped bone records so the user knows
@@ -378,7 +378,9 @@ namespace UTJ.Support
                 targetManager.friction = friction;
             }
 
+#pragma warning disable CS0414 // Field is assigned but its value is never used
             private bool automaticUpdates;
+#pragma warning restore CS0414 // Field is assigned but its value is never used
             private int simulationFrameRate;
             private float dynamicRatio;
             private Vector3 gravity;

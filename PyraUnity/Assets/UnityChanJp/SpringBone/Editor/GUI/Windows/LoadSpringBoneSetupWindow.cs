@@ -1,9 +1,6 @@
 ﻿using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UTJ.GameObjectExtensions;
-using UTJ.Support.GameObjectExtensions;
-using GameObjectUtil = UTJ.Support.GameObjectExtensions.GameObjectUtil;
 
 namespace UTJ
 {
