@@ -15,27 +15,31 @@ MonoBehaviour:
   m_GroupName: fe
   m_Data:
     m_SerializedData: []
-  m_GUID: cb2d985db0fff4d3f94d869fabe33d62
+  m_GUID: 94944f708e5906c468526939828b9e53
   m_SerializeEntries:
-  - m_GUID: e6e9a19c3678ded42a3bc431ebef7dbd
-    m_Address: Shaders/Utils/FallbackError.shader
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: ef5514adb4c2c48f199098d50f48c7ff
+  - m_GUID: bfdc2b361d2444d45b8aae1f9bd77861
     m_Address: CustomRP/Shaders/Chara/CharaStandard.shader
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 0e2850975bebd4edead28315b9285ab2
-    m_Address: CustomRP/Shaders/Common/Shadow.shader
+  - m_GUID: 756e72b8abfe21245a2423a9174e3579
+    m_Address: CustomRP/Shaders/Chara/CharaTrans.shader
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 13085d20faabc4f7c9280c11d9e834f6
+  - m_GUID: 83762443f85b241ffaf3228758766d1f
     m_Address: Unit/Model/uBody/Pyr0AF/c000/Prefabs/uBody_Pyr0AF_c000
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f0ad9def67a5e1f4ea6058d223a307cc
+    m_Address: CustomRP/Shaders/Common/Shadow.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e1e9109659e6b4e4ba02329e5fa1fe29
+    m_Address: Unit/Model/uBody/Pyr0AF/c001/Prefabs/uBody_Pyr0AF_c001
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
-  m_Settings: {fileID: 11400000, guid: 03a575ebfb0864bdaadfc3ce79f4a4f9, type: 2}
+  m_Settings: {fileID: 11400000, guid: 48df98a99aa853f4da26a0ba98752fd9, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 957bb14b650d24315be4ff95d9aa61ff, type: 2}
-    - {fileID: 11400000, guid: ffbf1da1068ae41da8e5593dcef5f301, type: 2}
+    - {fileID: 11400000, guid: ebfa9395cdea7804bb642ee316ce606e, type: 2}
+    - {fileID: 11400000, guid: f2e5ebc84969ce34ebc7dd7f24e139d7, type: 2}
