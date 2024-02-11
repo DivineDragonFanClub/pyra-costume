@@ -1,0 +1,11 @@
+[MAID_Pyra]
+Pyra Attire
+
+[MAID_H_Pyra]
+The outfit of Pyra, a special legendary Blade who grants tremendous fire-elemental power to her Driver.
+
+[MAID_Pyra2]
+Pyra Attire (Smash)
+
+[MAID_H_Pyra2]
+The outfit of Pyra, a special legendary Blade who grants tremendous fire-elemental power to her Driver.
