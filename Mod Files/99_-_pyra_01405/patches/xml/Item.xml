@@ -10,7 +10,7 @@
 			<Param Name="アセットフラグ" Ident="Aid" Type="string" Min="" Max="" Chg="" />
 			<Param Name="種類" Ident="Kind" Type="s8" Min="" Max="" Chg="" />
 			<Param Name="効果" Ident="UseType" Type="s8" Min="" Max="" Chg="" />
-			<Param Namep="武器属性" Ident="WeaponAttr" Type="s8" Min="" Max="" Chg="" />
+			<Param Name="武器属性" Ident="WeaponAttr" Type="s8" Min="" Max="" Chg="" />
 			<Param Name="アイコン" Ident="Icon" Type="string" Min="" Max="" Chg="" />
 			<Param Name="耐久" Ident="Endurance" Type="u8" Min="0" Max="255" Chg="1" />
 			<Param Name="威力" Ident="Power" Type="u8" Min="0" Max="255" Chg="1" />
