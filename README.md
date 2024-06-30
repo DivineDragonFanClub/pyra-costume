@@ -4,7 +4,7 @@ Looking for the mod to install? Check [here](https://gamebanana.com/mods/479907)
 
 ### How to use
 
-This was created following the guides available on the [Cobalt wiki](https://github.com/Raytwo/Cobalt/wiki/Setting-up-your-Unity-project)
+This was created following the guides available on the [Lythos wiki](https://github.com/DivineDragonFanClub/Lythos/wiki/Custom-models-(Unity)) and [Cobalt wiki](https://github.com/Raytwo/Cobalt/wiki/Spring-bones)
 
 Open the `PyraUnity` folder as a Unity project.
 
