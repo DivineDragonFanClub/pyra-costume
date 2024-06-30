@@ -14,7 +14,7 @@ When exporting it as an FBX for Unity usage, choose scale 0.01.
 
 ### Notes on Resources folder
 
-This contains a body model for targeting costume sizing. These are courtesy [Yunaka Yoshizawa](https://gamebanana.com/members/2904794)
+This contains male and female body models for targeting costume sizing. These are courtesy [Yunaka Yoshizawa](https://gamebanana.com/members/2904794)
 
 ### Special thanks
 
